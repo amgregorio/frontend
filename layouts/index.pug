@@ -1,0 +1,11 @@
+html
+	head 
+		title Front Tutorial
+	body
+		h2 Estados Sudeste
+		- var estados = ["São Paulo", "Minas Gerais", "São Paulo", "Espirito Santo", "Rio de Janeiro"];
+		div
+			ul
+				for name in estados
+					li(style="font-size: 26px;")= name
+				

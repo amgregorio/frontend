@@ -1,0 +1,14 @@
+{
+  "name": "projeto_frontend",
+  "version": "1.0.0",
+  "title": "Front",
+  "homepage": "http://www.example.com",
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
