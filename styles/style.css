@@ -1,0 +1,19 @@
+li {
+  color: #1A237E;
+  font-size: 24px;
+}
+.container {
+  background-color: #FFFFFF;
+}
+ul {
+  background-color: #f3f3f3;
+  border: 1px #f1f1f1;
+}
+ul li {
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+div:hover {
+  background-color: rgba(0, 69, 144, 0.5);
+}

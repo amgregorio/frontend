@@ -1,0 +1,35 @@
+@background-color: #FFFFFF;
+@text-color: #1A237E;
+@var: #004590;
+
+li{
+	color: @text-color;
+	font-size: 24px;
+}
+
+.container {
+	background-color: @background-color;
+}
+
+#ul(){
+	background-color: #f3f3f3;
+	border: 1px #f1f1f1;
+}
+
+ul{
+	#ul
+}
+
+ul{
+	li{
+    	background-color: #fff;
+    	border-radius: 3px;
+    	margin: 10px 0;
+	}
+}
+
+div{
+	&:hover{
+	   background-color: fadeout(@var, 50%)
+	}
+}

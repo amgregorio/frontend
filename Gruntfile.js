@@ -29,7 +29,7 @@ module.exports = function(grunt){
             dist : {
                 options : {style : 'compressed'},
                 files : {
-                    'styles/style.css' : 'assets/_less/style.less'
+                    'styles/style.css' : ['styles/style.less']
                 }
             }
         }, // sass
@@ -38,8 +38,7 @@ module.exports = function(grunt){
             dist : {
                 //arquivos que deve ser assisitdos
                 files : [
-                    'assets/_js/**/*',
-                    'assets/_less/**/*',
+                    'styles/**/*',
                     'layouts/**'
                 ],
 
