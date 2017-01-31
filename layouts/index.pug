@@ -1,11 +1,27 @@
-html
+mixin thumbnail(imageSRC, caption)
+	div.thumbnail
+		img(src="" + imageSRC + "")
+		h4.image-caption= caption
+html(lang="pt-br")
 	head 
+		meta(charset='utf-8')
 		title Front Tutorial
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
 	body
-		h2 Estados Sudeste
-		- var estados = ["São Paulo", "Minas Gerais", "São Paulo", "Espirito Santo", "Rio de Janeiro"];
-		div
+
+		include cabecalho
+
+		div.container
+			h2 Estados Sudeste
+			- var estados = [{nome: "São Paulo", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Sao_Paulo_in_Brazil.svg/2008px-Sao_Paulo_in_Brazil.svg.png"},{nome:"Minas Gerais", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Minas_Gerais_in_Brazil.svg/2008px-Minas_Gerais_in_Brazil.svg.png"},{nome:"Espirito Santo", img:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Espirito_Santo_in_Brazil.svg/2008px-Espirito_Santo_in_Brazil.svg.png"},{nome:"Rio de Janeiro", img: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Brazil_State_RiodeJaneiro.svg/350px-Brazil_State_RiodeJaneiro.svg.png"}];
+
+		div.container
 			ul
-				for name in estados
-					li(style="font-size: 26px;")= name
-				
+				for estado in estados
+					li.li
+						div.row
+							div.col-md-4
+								+thumbnail(estado.img, estado.nome)
+							div.col-md-8= estado.nome
+		
+		include footer
